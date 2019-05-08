@@ -1,0 +1,54 @@
+<div class="container-menu">
+    <h1>Solano's Menu</h1>
+
+    {{#each menuItems}}
+        <div id="menu-container">
+            <h3> {{this.name}} </h3>
+            <p id="description"> {{this.description}} - <span> {{this.price}} </span> </p>
+            <form action="/cart/{{this._id}}" method="POST"><button>add</button></form>
+        </div>
+        
+        
+        
+    {{/each}}
+
+
+</div>
+
+
+
+
+
+{{!-- <div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+
+       <div>
+        <h3>Anticuchos de corazon</h3>
+        <p>Pieces of veil heart madly in love, laying in a secret mild spicy Panca marinated mix from our wise chef, 
+            </br>skewed in wild sugar cane and brought to a smoking fire - <span>$14</span> <a href="/menu/5cd097de889e2acf91ffc5fb"><button>add</button></p><a/>
+        </div>
+
+    <h1 style="color: white"><span class="fa fa-sign-in" ></span> Signup</h1>
+
+    <!-- LOGIN FORM -->
+    <form action="/#Menu" method="post">
+        <div class="form-group">
+            <label style="color: black">Email</label>
+            <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <label style="color: black">Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg" style="background-color: red">Signup</button>
+    </form>
+
+    <hr>
+
+    <p style="color: white">Already have an account? <a href="/#menu" style="color: red">Login</a></p>
+    <p style="color: white"> Or go <a href="/" style="color: red">home</a>.</p>
+
+
+
+</div> --}}

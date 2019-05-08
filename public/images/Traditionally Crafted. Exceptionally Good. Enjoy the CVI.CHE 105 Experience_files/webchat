@@ -1,0 +1,153 @@
+
+(function () {
+    try {
+        var dataresponse,source,isMicroSite,activationStatus;
+        dataresponse = '{"businessId":154755946856541,"chatTheme":"floating","chatIcon":"","chatIconValue":"https:\/\/bzimages-prod.s3.amazonaws.com\/529365\/fileUpload\/529365_1548195717466_lemoniconxsmall.png","bannerColor":"#F8F8F8","bannerTextColor":"#212121","btnColor":"#1976D2","btnTxtColor":"#FFFFFF","autoReplyTxt":"Thank you for contacting CVI.CHE 105! Someone from our team will reach out shortly.","headerHeadline":"We will text you!","headerDescription":"Hello! Our team is here to help. Enter your message below and one of our reps will text you shortly.","thankyouMsgHeadline":"We received your message! ","thankyouMsgDescription":"Our team member will text you from this number","apiKey":null,"businessDomain":null,"smb":false,"popupInterval":5,"microsite":0,"userProfile":[{"userProfileName":"","userProfileImage":""}],"businessLocations":[{"businessId":154758100034326,"location":"Aventura, FL","businessSMSPhoneNumber":"(754) 208-0118","countryCode":"US","zipcode":"33180","address1":"Aventura Mall","address2":"19565 Biscayne Boulevard #954","chatEnabled":true},{"businessId":154758089991626,"location":"Miami Beach, FL","businessSMSPhoneNumber":"(786) 420-4943","countryCode":"US","zipcode":"33139","address1":"1245 Lincoln Rd","address2":"","chatEnabled":true},{"businessId":154755956358881,"location":"Miami, FL","businessSMSPhoneNumber":"(786) 460-4738","countryCode":"US","zipcode":"33132","address1":"105 NE 3rd Ave","address2":"","chatEnabled":true}],"chatBubble":"Welcome to CEVICHE105.COM! How may we assist you?","chatIconColor":"#455B76","chatIconForeColor":"#FFFFFF","chatConfigId":193,"accountType":2}';
+        dataresponse = JSON.parse(decodeURI(dataresponse));
+        if(window && window.parent && window.parent.__INITIAL_STATE__ && window.parent.__INITIAL_STATE__.homeReducer && window.parent.__INITIAL_STATE__.homeReducer.data){
+            var homeReducerData = window.parent.__INITIAL_STATE__.homeReducer.data;
+            isMicroSite = true;
+            enterpriseNumber = homeReducerData.enterpriseInfo ? homeReducerData.enterpriseInfo.businessNumber : homeReducerData.businessNumber;
+            source = 6;
+            activationStatus = homeReducerData.activationStatus;
+         }
+        if (!document.getElementsByClassName) {
+            document.getElementsByClassName = function(className) {
+                return this.querySelectorAll("." + className);
+            };
+            Element.prototype.getElementsByClassName = document.getElementsByClassName;
+        }
+
+        var totalWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var totalHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        var parentTitle = document.title;
+        var newTitle = isMicroSite ? document.title : "(1) New Message!";
+        var titleChangeInterval;
+        var titleFlag = 0;
+
+        function initIframe() {
+            var bfdiv = document.getElementById('bf-revz-widget-' + _bewebc.wid);
+            if(!bfdiv) {
+                tries++;
+                if (tries > 50) {
+                    return false;
+                }
+                setTimeout(initIframe, 500);
+                return;
+            }
+
+            //bfdiv.setAttribute('style', '-webkit-overflow-scrolling: touch;z-index: 9999999;right: 15px;bottom: 0;top: 0;position: fixed;overflow: hidden;width:325px;');
+
+            if (!bfdiv.firstChild) {
+                bfdiv.appendChild(bfi);
+            } else if (bfdiv.firstChild && bfdiv.firstChild.nodeName != 'IFRAME') {
+                bfdiv.insertBefore(bfi, bfdiv.firstChild);
+            }
+
+        }
+
+        var winHeight = 727;
+        if (window.innerHeight < 727) {
+            winHeight = window.innerHeight;
+        }
+
+        window.addEventListener('resize', function() {
+            if (window.innerHeight < 727) {
+                winHeight = window.innerHeight;
+            } else {
+                winHeight = 727;
+            }
+        });
+
+        var _bewebc = {};
+        var bfi = document.createElement('iframe');
+
+        var tries = 1;
+        _bewebc.host = 'https://birdeye.com/';
+        _bewebc.account = 154755946856541;
+        _bewebc.ver = 1;
+        _bewebc.btype = 1;
+        _bewebc.wid = 324062013;
+        _bewebc.key = '8T94sqrxSnsMjwWbBzakhooLeZzUyRVA';
+
+        var finalresbewebc = {};
+        if (dataresponse) {
+            finalresbewebc = dataresponse;
+            if (totalWidth < 960) {
+                finalresbewebc.chatTheme = "drawer";
+            }
+        }
+        window.addEventListener('message', function(e) {
+            if (e.origin.indexOf("birdeye.com") != -1) {
+                if (e.data == "icon-clicked") {
+                    if (finalresbewebc.chatTheme == "floating") {
+                        document.getElementById("bewebchat").setAttribute('style', '-webkit-overflow-scrolling: touch; z-index: 9999999; right:20px; bottom:20px; position:fixed; overflow:hidden; width:346px;height:'+winHeight+'px');
+                    } else {
+                        document.getElementById("bewebchat").setAttribute('style', '-webkit-overflow-scrolling: touch; z-index: 9999999; right:0px; bottom:0px; top:0px; position:fixed; overflow:hidden; width:336px;height: 100%;');
+                    }
+                    if (titleChangeInterval) {
+                        clearInterval(titleChangeInterval);
+                    }
+                    document.title = parentTitle;
+                } else if (e.data == "icon-closed") {
+                    var wid = "20px";
+                    if (totalWidth < 960) {
+                        wid = "20px";
+                    }
+                    document.getElementById("bewebchat").setAttribute('style', '-webkit-overflow-scrolling: touch; z-index: 9999999; right:'+ wid +'; bottom:20px; position:fixed; overflow:hidden; width:80px;height: 78px;');
+
+                } else if (e.data == "getwidth") {
+                    e.source.postMessage({width: totalWidth, height: totalHeight, src: "birdeye"}, "*");
+                } else if (e.data == "show-bubble") {
+                    if (totalWidth < 960) {
+                        bfi.setAttribute('style', '-webkit-overflow-scrolling: touch; z-index: 9999999; right:20px; bottom:20px; position:fixed; overflow:hidden; width:340px; height: 227px;');
+                    } else {
+                        bfi.setAttribute('style', '-webkit-overflow-scrolling: touch; z-index: 9999999; right:20px; bottom:20px; position:fixed; overflow:hidden; width:340px; height: 227px;');
+                    }
+                                        titleChangeInterval = setInterval(function(){
+                        document.title = titleFlag ? parentTitle : newTitle;
+                        titleFlag = !titleFlag;
+                    }, 2500);
+                                    }
+                else if (e.data == "hide-bubble") {
+                    if (totalWidth < 960) {
+                        bfi.setAttribute('style', '-webkit-overflow-scrolling: touch; z-index: 9999999; right:20px; bottom:20px; position:fixed; overflow:hidden; width:80px; height: 78px;');
+                    } else {
+                        bfi.setAttribute('style', '-webkit-overflow-scrolling: touch; z-index: 9999999; right:20px; bottom:20px; position:fixed; overflow:hidden; width:80px; height: 78px;');
+                    }
+                    if (titleChangeInterval) {
+                        clearInterval(titleChangeInterval);
+                    }
+                    document.title = parentTitle;
+                }
+            }
+        });
+
+        bfi.name = 'bfiframe';
+        bfi.src = _bewebc.host + 'widget/webchatrender.php?bid=' + _bewebc.account + '&wid=' + _bewebc.btype + '&ver=' + _bewebc.ver + '&key=' + _bewebc.key +'&dom=' + escape(document.location.origin);
+        var isMobileClass = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? "" : "animate";
+        bfi.src = bfi.src + '&isMobileClass=' + isMobileClass;
+        if(isMicroSite){
+            bfi.src = bfi.src +'&source='+ source +'&isMicroSite='+ isMicroSite +'&enterpriseNumber='+ enterpriseNumber +'&activationStatus='+ activationStatus;
+        }
+        
+        bfi.id = 'bewebchat';
+
+        bfi.frameBorder = '0';
+        bfi.style.borderWidth = 0;
+        bfi.style.display = 'block';
+        bfi.style.margin = '0 auto';
+        bfi.style.height = '100%';
+
+        if (totalWidth < 960) {
+            bfi.setAttribute('style', '-webkit-overflow-scrolling: touch; z-index: 9999999; right:20px; bottom:20px; position:fixed; overflow:hidden; width:70px; height: 70px;');
+        } else {
+            bfi.setAttribute('style', '-webkit-overflow-scrolling: touch; z-index: 9999999; right:20px; bottom:20px; position:fixed; overflow:hidden; width:70px; height: 70px;');
+        }
+        initIframe();
+
+
+    } catch(e) {
+        console.log(e)
+    }
+})();

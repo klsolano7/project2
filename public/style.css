@@ -1,0 +1,307 @@
+
+
+
+.bg {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url(/images/machu.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: moveBg 3s forwards;
+}
+
+
+.bg2 {
+  height: 90vh;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.667);
+  margin-top: 15vh;
+  height: 60vh;
+}
+
+.container-profile {
+    /* filter: blur(5px); */
+    background-color: rgba(0, 0, 0, 0.667);
+    margin-top: 15vh;
+    height: 60vh;
+  }
+
+.container-login {
+    background-color: rgba(0, 0, 0, 0.667);
+    margin-top: 15vh;
+    height: 60vh;
+  }
+
+.container-signup {
+    background-color: rgba(0, 0, 0, 0.667);
+    margin-top: 15vh;
+    height: 60vh;
+  }
+
+  .profile-info{
+      text-align: center;
+  }
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav a:hover {
+  text-decoration: none;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+nav {
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.loginImage {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url(/images/city.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.signupImg {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url(./images/signuppic.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#topSection {
+  background-image: url(/images/machu.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: -14vh;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theJumboTron {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.667);
+  height: 60vh;
+  width: 90vw;
+  color: red;
+  border-radius: 50px;
+}
+
+.theJumboTron img {
+  width: 25vw;
+
+}
+.theJumboTron h2 {
+  position: relative;
+  bottom: 2vh;
+  font-size: 4vw;
+  font-family: fantasy;
+  color: white;
+}
+
+#section2 {
+  height: 90vh;
+  background-color: rgb(65, 65, 65);
+}
+
+#section3 {
+  height: 90vh;
+  background-color: rgb(51, 49, 50);
+}
+
+.container-menu {
+  padding: 60px;
+  text-align: center;
+  /* background-color: rgba(179, 23, 23, 0.863); */
+  background-color: rgba(90, 87, 87, 0.801);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-menu h1 {
+  color: black;
+  padding-top: 20px;
+}
+
+.container-menu p {
+  color: black;
+  font-size: 18px;
+}
+
+.container-menu h3 {
+  color: black;
+}
+
+.container-menu button {
+  font-size: 10px;
+  background-color: black;
+  color: white;
+  border: solid black 2px;
+  padding: 1px 8px;
+  border-radius: 10px;
+}
+
+.container-menu button:hover {
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  border: solid red 2px;
+  padding: 1px 8px;
+  font-size: 15px;
+}
+
+#cart-btn {
+  width: 2vw;
+  height: 2vw;
+}
+#cart-btn:hover {
+  width: 3vw;
+  height: 3vw;
+}
+
+#logo-btn {
+  width: 3vw;
+  height: 3vw;
+}
+
+#logo-btn:hover {
+  width: 4vw;
+  height: 4vw;
+}
+
+#bottom-bar {
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+#bottom-bar h4 {
+  text-align: center;
+}
+
+/* #description{
+
+} */
+
+#menu-container {
+  width: 40vw;
+}
+
+#cart-items {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    align-items: center;
+    /* background-color: bisque; */
+    width: 45vw;
+    flex-direction: row;
+    border: 2px solid black;
+}
+
+#welcome-header{
+    padding-top: 7%;
+    font-family: fantasy;
+}
+
+.container-cart{
+    background-color: white;
+    height: 100vh;
+}
+
+#cart-items div {
+    width: 20vw;
+}
+
+#cart-items > div:nth-child(3) {
+    width: 5vw;
+}
+
+.container-cart div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+}
+
+
+.checkOut{
+    display: flex;
+    justify-content: center;
+    
+}
+
+@media only screen and (max-width: 425px) {
+
+    .theJumboTron{
+        height: 45vh;
+        width: 98vw;
+    }
+
+    .theJumboTron img {
+        width: 150px;
+    }
+
+    .theJumboTron h2{
+        font-size: 25px;
+        text-align: center;
+    }
+
+
+    #bottom-bar{
+        font-size: 10px;
+        display: flex;
+        align-items: flex-start;
+        height: 14%;
+
+    }
+    #bottom-bar h4{
+        font-size: 10px;
+    }
+
+    .container-signup{
+        height: 65vh;
+    }
+    
+    .container-login{
+        height: 75vh;
+    }
+  }
+  

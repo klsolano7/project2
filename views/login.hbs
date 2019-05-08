@@ -1,0 +1,41 @@
+<div class="container-login">
+    <div class="col-sm-6 col-sm-offset-3 loginPage">
+
+        <h1 style="color: white"><span class="fa fa-sign-in"></span> Login</h1>
+
+
+
+        <!-- LOGIN FORM -->
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label style="color: black">Email</label>
+                <input type="text" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label style="color: black">Password</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+
+            <button type="submit" class="btn btn-warning btn-lg" style="background-color: red">Login</button>
+        </form>
+
+        <hr>
+
+        <p style="color:white">Login or Register with:</p>
+
+        {{!-- <a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a> --}}
+        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+        {{!-- <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a> --}}
+        {{!-- <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google+</a> --}}
+        {{!-- <a href="/profile" class="btn btn-guest" style="color: red"><span class="fa fa-user"></span> Continue as
+            guest</a> --}}
+
+        <p style="color:white">Need an account? <a href="/signup" style="color:red">Signup</a></p>
+        <p style="color:white">Or go <a href="/" style="color:red">home</a>.</p>
+
+
+
+    </div>
+     <div class="loginImage"></div>
+</div>
+

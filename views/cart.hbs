@@ -1,0 +1,90 @@
+<div class="container-cart">
+
+{{!-- <div id="main-cart-container"> --}}
+    {{ theItems }}
+    {{!-- <h2>{{ theItems.name }}</h2> --}}
+
+    
+        <h1 align="center" id="welcome-header">Welcome to cart</h1>
+        <div>
+            {{#each theUser.myCart}}
+
+                <div id="cart-items">
+                    <div>
+                        <h3>{{inc @index}}</h3>
+                    </div>
+                    <div>
+                        <h3>{{this.name}}</h3>
+                    </div>
+                    <div>
+                        {{!-- <p>{{this.description}}</p> --}}
+                        <h3>Price: ${{this.price}}</h3>
+                    </div>
+                    <div>
+                        {{!-- <a href="/deleteItem/{{this._id}}"><button type="button">Delete</button></a> --}}
+                        <form action="/deleteItem/{{this._id}}" method="POST"><button>X</button></form>
+                    </div>
+
+
+                </div>
+                
+            {{/each}}
+        </div>
+
+
+                    <div>
+                        <span class="total-price">Total: ${{theUser.totalPrice}}</span>
+                        {{!-- <a href="/checkout"><button>Check out</button></a> --}}
+
+                    </div>
+
+{{!-- </div> --}}
+
+</div>
+
+<a href="#signupModal" data-toggle="modal" class="checkOut"><i class="icon-user"></i>Check Out<i class="icon-sort-down"></i></a>
+
+
+
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 <h3 class="modal-title text-center" id="myModalLabel">Enter card information</h3>
+
+            </div>
+            <div class="modal-body">
+                <div class="row text-center">
+                    <form class="col-md-10 col-md-offset-1" style="padding:0" action="/pay" method="POST" >
+                        {{theUser.email}}
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" id="signupEmail1" name="cardNumber" placeholder="Card Number" contenteditable="false">
+                        </div>
+                      <p>Expiration</p>
+                        <div class="form-group col-md-6">                            
+                            <input type="text" class="form-control" id="signupPassword"  placeholder="Month" contenteditable="false">
+                        </div>
+                        <div class="form-group col-md-6">                            
+                            <input type="text" class="form-control" id="signupPassword" placeholder="Year" contenteditable="false">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" id="access-code" placeholder="Premier Access Code">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" id="access-code" name="email" placeholder="Email">
+                        </div>
+                      <div class="clearfix"></div>
+                                      <div class="row text-center">
+                  <hr>
+                    <button type="submit" class="btn btn-primary col-md-8 col-md-offset-2">Submit!</button>
+                    <br class="">
+                </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

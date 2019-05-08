@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang=“en”>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <!-- <script src="./javascript/script.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
+</head>
+  <body>
+    <nav style="font-family: fantasy">
+      <a href="/"><img id="logo-btn" src="/images/crown.png"></a>
+      <a href="/">Home</a>
+      <a href="/login">Join Us / Login</a>
+      {{!-- <a href="/signup">Signup</a> --}}
+      <a href="/profile">Profile</a>
+      <a href="menu" id="menu-btn">Menu</a>
+      <a href="cart"><img id="cart-btn" src="/images/cart.png"></a>
+    </nav>
+    
+    
+    {{{body}}}
+    
+  </body>
+  {{!-- <script>
+    document.querySelector("#menu-btn").addEventListener('click', () => {
+        axios.get("/menu").then((menu)=> {
+          console.log(menu.data)
+                  document.querySelector('#menu').innerHTML = '<h1>Menu</h1>'
+
+          for(let i = 0; i< menu.data.length; i++){
+        document.querySelector('#menu').innerHTML += `<h4>Name</h4><p>${menu.data[i].name}</p>
+        <h4>Price</h4><p>${menu.data[i].price}</p>`
+
+          }
+        })
+    })
+  </script> --}}
+  <script src="myscript.js"></script>
+</html>
