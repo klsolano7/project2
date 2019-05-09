@@ -22,7 +22,10 @@ var path = require('path');
 var hbs = require('hbs')
 //console.log("type of ======= ", typeof(process.env.MONGOURI), process.env)
 // configuration ===============================================================
-mongoose.Promise = Promise;
+//mongoose.Promise = Promise;
+
+console.log('maybbbeb ',process.env)
+
 mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true})
 .then(x=>{
     // console.log(x)
