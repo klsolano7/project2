@@ -313,12 +313,12 @@ nav {
     }
 
     #cart-btn{
-        width: 3vw;
         height: 3vh;
+        width: 7vw;
     }
 
     #logo-btn{
-        width: 4vw;
+        width: 8vw;
         height: 4vh;
     }
 
