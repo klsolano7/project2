@@ -300,7 +300,7 @@ color: black !important;
     display: flex;
     justify-content: center;
     text-decoration: none;
-    color: black;
+    color: white;
     background-color: rgba(220, 76, 76, 0.863);
     height: 10vh;
     width: 12vw;
@@ -309,7 +309,7 @@ color: black !important;
 }
 
 .total-price {
-    color: black;
+    color: white;
     font-size: 25px;
     margin: 3%;
   }
@@ -439,7 +439,6 @@ color: black !important;
         display: flex;
         justify-content: center;
         text-decoration: none;
-        color: black;
         background-color: rgba(220, 76, 76, 0.863);
         height: 10vh;
         width: 45vw;

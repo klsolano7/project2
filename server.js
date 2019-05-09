@@ -23,6 +23,10 @@ var hbs = require('hbs')
 //console.log("type of ======= ", typeof(process.env.MONGOURI), process.env)
 // configuration ===============================================================
 //mongoose.Promise = Promise;
+hbs.registerHelper('json', function(context){
+    return JSON.stringify(context)
+})
+
 
 console.log('maybbbeb ',process.env)
 

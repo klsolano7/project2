@@ -61,6 +61,9 @@
 
             </div>
             <div class="modal-body">
+                {{#if paymentProcessed}}    
+                Your order is being processed, please check your email for confirmation!
+                {{else}}
                 <div class="row text-center">
                     <form class="col-md-10 col-md-offset-1" style="padding:0" action="/pay" method="POST" >
                         {{theUser.email}}
@@ -83,13 +86,22 @@
                       <div class="clearfix"></div>
                                       <div class="row text-center">
                   <hr>
-                    <button type="submit" class="btn btn-primary col-md-8 col-md-offset-2" style="background-color:rgba(220, 76, 76, 0.863)">Submit!</button>
+                    <button type="submit" id="submitButton" class="btn btn-primary col-md-8 col-md-offset-2" style="background-color:rgba(220, 76, 76, 0.863)">Submit!</button>
                     <br class="">
                 </div>
                     </form>
                 </div>
-
+                {{/if}}
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    
+    let paymentProcessed =  '{{{paymentProcessed}}}'
+    console.log(paymentProcessed)
+    if(paymentProcessed){
+        $('button.checkOut').click()
+    }
+</script>

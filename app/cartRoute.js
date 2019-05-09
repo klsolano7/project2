@@ -29,7 +29,7 @@ module.exports = function(app, passport) {
         theUser.totalPrice = calculateTotal(theUser.myCart)
 
         console.log("the user info for the cart >>>>>>>>> ", theUser);
-        res.render("cart", { theUser: theUser });
+        res.render("cart", { theUser: theUser, paymentProcessed: req.query.paymentProcessed });
       })
       .catch(err => {
         next(err);
@@ -64,7 +64,7 @@ module.exports = function(app, passport) {
         text: `Your estimated wait time for pick up is 20 minutes. Thank you for you patience! Your cc# is ${req.body.cardNumber}`,
         html: `<b>Your estimated wait time for pick up is 20 minutes. Thank you for you patience! Your cc# is ${req.body.cardNumber}</b>`
       })
-      .then(info => { res.json({cool:true}) }) //res.render('message', {email, subject, message, info}))
+      .then(info => { res.redirect(`/cart?paymentProcessed=true`) }) //res.render('message', {email, subject, message, info}))
       .catch(error => console.log(error));  
   })
 
