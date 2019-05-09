@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Menu = require('./app/models/Menu');
 
-mongoose.connect('mongodb://localhost/projecttwo');
+mongoose.connect('mongodb+srv://klsolano7:TheBatman123@cluster0-miuh7.mongodb.net/test?retryWrites=true');
 
 const menuItems = [
   {

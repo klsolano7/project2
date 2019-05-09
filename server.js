@@ -18,12 +18,16 @@ var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
 var configDB = require('./config/database.js');
-
 var path = require('path');
 var hbs = require('hbs')
 
 // configuration ===============================================================
-mongoose.connect(configDB.url); // connect to our database
+//mongoose.Promise = Promise;
+mongoose.connect(configDB.url, { useNewUrlParser: true}).then(x=>{
+    console.log(x)
+}).catch(err=>{
+    console.log(err)
+}) // connect to our database
 
 require('./config/passport')(passport); // pass passport for configuration
 

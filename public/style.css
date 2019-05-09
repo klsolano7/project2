@@ -1,5 +1,7 @@
-
-
+/* 
+*{
+    border: red solid 2px;
+} */
 
 .bg {
   height: 100%;
@@ -250,7 +252,8 @@ nav {
 }
 
 #cart-items > div:nth-child(3) {
-    width: 5vw;
+    width: 20vw;
+    padding: 0%;
 }
 
 .container-cart div {
@@ -265,7 +268,12 @@ nav {
 .checkOut{
     display: flex;
     justify-content: center;
-    
+    text-decoration: none;
+    color: black;
+    background-color: rgb(126, 20, 20);
+    height: 10vh;
+    width: 12vw;
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 425px) {
@@ -288,7 +296,7 @@ nav {
     #bottom-bar{
         font-size: 10px;
         display: flex;
-        align-items: flex-start;
+        /* align-items: flex-start; */
         height: 14%;
 
     }
@@ -303,5 +311,21 @@ nav {
     .container-login{
         height: 75vh;
     }
+
+    #cart-btn{
+        width: 4vw;
+        height: 4vh;
+    }
+
+    #logo-btn{
+        width: 5vw;
+        height: 4vh;
+    }
+
+    
+
   }
   
+  #checkout-btn-container{
+      padding-top: 1%;
+  }
