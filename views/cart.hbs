@@ -1,3 +1,4 @@
+
 <div class="container-cart">
 
 {{!-- <div id="main-cart-container"> --}}
@@ -31,15 +32,16 @@
             {{/each}}
             <div id="checkout-btn-container">
             <a  href="#signupModal" data-toggle="modal"><i class="icon-user"></i> <button class="checkOut text-center">  Check Out </button><i class="icon-sort-down"></i></a>
+            <span class="total-price">Total: ${{theUser.totalPrice}}</span>
             </div>
         </div>
 
 
-                    <div>
+                    {{!-- <div>
                         <span class="total-price">Total: ${{theUser.totalPrice}}</span>
-                        {{!-- <a href="/checkout"><button>Check out</button></a> --}}
+                        
 
-                    </div>
+                    </div> --}}
 
 {{!-- </div> --}}
 
@@ -72,16 +74,16 @@
                         <div class="form-group col-md-6">                            
                             <input type="text" class="form-control" id="signupPassword" placeholder="Year" contenteditable="false">
                         </div>
-                        <div class="form-group col-md-12">
+                        {{!-- <div class="form-group col-md-12">
                             <input type="text" class="form-control" id="access-code" placeholder="Premier Access Code">
-                        </div>
+                        </div> --}}
                         <div class="form-group col-md-12">
                             <input type="text" class="form-control" id="access-code" name="email" placeholder="Email">
                         </div>
                       <div class="clearfix"></div>
                                       <div class="row text-center">
                   <hr>
-                    <button type="submit" class="btn btn-primary col-md-8 col-md-offset-2">Submit!</button>
+                    <button type="submit" class="btn btn-primary col-md-8 col-md-offset-2" style="background-color:rgba(220, 76, 76, 0.863)">Submit!</button>
                     <br class="">
                 </div>
                     </form>

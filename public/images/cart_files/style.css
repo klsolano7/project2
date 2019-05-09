@@ -3,8 +3,6 @@
     border: red solid 2px;
 } */
 
-
-
 .bg {
   height: 100%;
   width: 100%;
@@ -190,10 +188,10 @@ nav {
   width: 2vw;
   height: 2vw;
 }
-/* #cart-btn:hover {
+#cart-btn:hover {
   width: 3vw;
   height: 3vw;
-} */
+}
 
 #logo-btn {
   width: 3vw;
@@ -244,21 +242,15 @@ nav {
     width: 45vw;
     flex-direction: row;
     border: 2px solid black;
-    background-color: rgba(220, 76, 76, 0.863);
-    color: white; 
-    margin: 1%;
-    border-radius: 50px;
 }
 
 #welcome-header{
     padding-top: 7%;
     font-family: fantasy;
-    color: white;
 }
 
 .container-cart{
-    background-color: #1F1F1F;
-    background-size: cover;
+    background-color: white;
     height: 100vh;
 }
 
@@ -283,10 +275,6 @@ nav {
     display: flex;
 }
 
-#cart-items div:nth-child(4) {
-color: black !important;
-}
-
 .container-cart div {
     display: flex;
     justify-content: center;
@@ -304,56 +292,8 @@ color: black !important;
     background-color: rgba(220, 76, 76, 0.863);
     height: 10vh;
     width: 12vw;
-    font-size: 20px; 
-    border-radius: 50px;
+    font-size: 20px;
 }
-
-.total-price {
-    color: black;
-    font-size: 25px;
-    margin: 3%;
-  }
-
-  .profileInfo{
-    margin: 8% 10% 0% 10%;
-    font-family: fantasy;
-}
-
-.profileInfo{
-    margin: 8% 10% 0% 10%;
-    font-family: fantasy;
-}
-
-.profileInfo p{
-    color: black;
-}
-
-.profileInfo a{
-    color: red;
-    text-decoration: none;
-}
-
-  .logout{
-    /* background-color: rgba(220, 76, 76, 0.863); */
-    background-color: black;
-    font-size: 24px;
-    border-radius: 30px;
-    color: white !important;
-  }
-
-  .logout:hover{
-      background-color: red;
-  }
-
-  .main-profile{
-    background-image: url(./images/signuppic.jpg);
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 
 @media only screen and (max-width: 425px) {
 
@@ -387,18 +327,12 @@ color: black !important;
     }
 
     .container-signup{
-        height: 60vh;
-        padding-top: 3%;
+        height: 65vh;
     }
     
     .container-login{
-        height: 60vh;
-        padding-top: 3%;
+        height: 75vh;
     }
-/* 
-    .container-login label{
-        color: white;
-    } */
 
     #cart-btn{
         height: 3vh;
@@ -422,7 +356,6 @@ color: black !important;
         width: 90vw;
         flex-direction: row;
         border: 2px solid black;
-        height: 10vh;
     }
 
     #menu-container {
@@ -445,26 +378,13 @@ color: black !important;
         width: 45vw;
         font-size: 20px;
         border-radius: 50px;
-        color:white;
       }
     
       #cart-items h3{
           font-size: 14px
       }
 
-      .total-price {
-        color: white;
-        font-size: 25px;
-        margin: 5%;
-      }
-
-      #welcome-header{
-        margin-top: 20%;
-    }
-
-    .profileInfo{
-        margin-top: 40%;
-    }
+    
 
   }
   

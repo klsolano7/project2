@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://localhost:8080/cart -->
+<html lang="“en”"><link type="text/css" id="dark-mode" rel="stylesheet" href="http://localhost:8080/cart"><style type="text/css" id="dark-mode-custom-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./cart_files/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
+    <script src="./cart_files/jquery.js"></script>
+    <script src="./cart_files/bootstrap.min.js"></script>
+    <script src="./cart_files/d3.min.js"></script>
+    <link rel="stylesheet" href="./cart_files/style.css">
+    <script src="./cart_files/axios.js"></script>
+    <!-- <script src="./javascript/script.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
+</head>
+  <body>
+    <nav style="font-family: fantasy">
+      <a href="http://localhost:8080/"><img id="logo-btn" src="./cart_files/crown.png"></a>
+      <a href="http://localhost:8080/">Home</a>
+      <a href="http://localhost:8080/login">Join Us / Login</a>
+      <a href="http://localhost:8080/profile">Profile</a>
+      <a href="http://localhost:8080/menu" id="menu-btn">Menu</a>
+      <a href="http://localhost:8080/cart"><img id="cart-btn" src="./cart_files/cart.png"></a>
+    </nav>
+    
+    
+    <div class="container-cart">
+
+    
+
+    
+        <h1 align="center" id="welcome-header">Welcome to cart</h1>
+        <div>
+
+                <div id="cart-items">
+                    <div>
+                        <h3>1</h3>
+                    </div>
+                    <div>
+                        <h3>Ceviche</h3>
+                    </div>
+                    <div>
+                        <h3>Price: $13</h3>
+                    </div>
+                    <div>
+                        <form action="http://localhost:8080/deleteItem/5cd43b7a5a06a520005adffc" method="POST"><button>X</button></form>
+                    </div>
+
+
+                </div>
+                
+
+                <div id="cart-items">
+                    <div>
+                        <h3>2</h3>
+                    </div>
+                    <div>
+                        <h3>Aji De Gallina</h3>
+                    </div>
+                    <div>
+                        <h3>Price: $12</h3>
+                    </div>
+                    <div>
+                        <form action="http://localhost:8080/deleteItem/5cd43b7a5a06a520005adffd" method="POST"><button>X</button></form>
+                    </div>
+
+
+                </div>
+                
+            <div id="checkout-btn-container">
+            <a href="http://localhost:8080/cart#signupModal" data-toggle="modal"><i class="icon-user"></i> <button class="checkOut text-center">  Check Out </button><i class="icon-sort-down"></i></a>
+            </div>
+        </div>
+
+
+                    <div>
+                        <span class="total-price">Total: $25</span>
+
+                    </div>
+
+
+</div>
+
+
+
+
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 <h3 class="modal-title text-center" id="myModalLabel">Enter card information</h3>
+
+            </div>
+            <div class="modal-body">
+                <div class="row text-center">
+                    <form class="col-md-10 col-md-offset-1" style="padding:0" action="http://localhost:8080/pay" method="POST">
+                        
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" id="signupEmail1" name="cardNumber" placeholder="Card Number" contenteditable="false">
+                        </div>
+                      <p>Expiration</p>
+                        <div class="form-group col-md-6">                            
+                            <input type="text" class="form-control" id="signupPassword" placeholder="Month" contenteditable="false">
+                        </div>
+                        <div class="form-group col-md-6">                            
+                            <input type="text" class="form-control" id="signupPassword" placeholder="Year" contenteditable="false">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" id="access-code" placeholder="Premier Access Code">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" id="access-code" name="email" placeholder="Email">
+                        </div>
+                      <div class="clearfix"></div>
+                                      <div class="row text-center">
+                  <hr>
+                    <button type="submit" class="btn btn-primary col-md-8 col-md-offset-2">Submit!</button>
+                    <br class="">
+                </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    
+  
+  <script src="./cart_files/myscript.js"></script>
+</body></html>
