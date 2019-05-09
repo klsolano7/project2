@@ -2,6 +2,7 @@
 
 // set up ======================================================================
 // get all the tools we need
+require("dotenv").config()
 var express  = require('express');
 var app      = express();
 var port     = process.env.PORT || 8080;
@@ -11,21 +12,22 @@ var flash    = require('connect-flash');
 const nodemailer = require("nodemailer");
 
 
-
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
-var configDB = require('./config/database');
+// var configDB = require('./config/database');
 var path = require('path');
 var hbs = require('hbs')
-
+//console.log("type of ======= ", typeof(process.env.MONGOURI), process.env)
 // configuration ===============================================================
-//mongoose.Promise = Promise;
-mongoose.connect(configDB.url, { useNewUrlParser: true}).then(x=>{
-    console.log(x)
-}).catch(err=>{
+mongoose.Promise = Promise;
+mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true})
+.then(x=>{
+    // console.log(x)
+})
+.catch(err=>{
     console.log(err)
 }) // connect to our database
 
